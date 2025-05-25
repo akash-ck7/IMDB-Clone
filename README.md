@@ -2,11 +2,11 @@ IMDb Clone — Project Overview
 
 Project Summary
 
-The IMDb Clone is a full-stack web application that allows users to:
-• Add, edit, and list movies.
-• Search for movie data using the OMDb API.
-• All operations happen on a single-page UI built with React + Bootstrap.
-• Backend built using Node.js, Express, Sequelize, PostgreSQL.
+    The IMDb Clone is a full-stack web application that allows users to:
+        • Add, edit, and list movies.
+        • Search for movie data using the OMDb API.
+        • All operations happen on a single-page UI built with React + Bootstrap.
+        • Backend built using Node.js, Express, Sequelize, PostgreSQL.
 
 Features
 
@@ -32,22 +32,24 @@ Step-by-Step Instructions
 
 1.  Clone the Repo
 
-git clone https://github.com/your-username/imdb-clone.git
-cd imdb-clone
+    git clone https://github.com/akash-ck7/IMDB-Clone.git
+    cd imdb-clone
 
-2. Backend Setup
+2.  Backend Setup
 
-cd imdb-backend
-npm install
+    cd imdb-backend
+    npm install
 
-Update config/db.config.js with your PostgreSQL credentials.
-• Create the database manually (e.g., imdb_db) or let Sequelize sync it automatically.
-• Run backend:
-npm start 3. Frontend Setup
+    Update config/db.config.js with your PostgreSQL credentials.
+    • Create the database manually (e.g., imdb_db) or let Sequelize sync it automatically.i use sequelize
+    • Run backend:
+    npm start
 
-cd imdb-frontend
-npm install
-npm start
+3.  Frontend Setup
+
+    cd imdb-frontend
+    npm install
+    npm start
 
 How It Works 1. Search Movie (OMDb API)
 • User types a movie name → gets details like title, actors, director, and release date.
