@@ -1,0 +1,11 @@
+License
+
+Copyright (c) 2025 Vidhyasagar
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the “Software”),and use 
+for your project but no changes is to be done only read and copy and clone 
+
+No changes in code and merges back and comited into my repo   these all are resticted .
+
+
