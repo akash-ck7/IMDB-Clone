@@ -6,7 +6,7 @@ The IMDb Clone is a full-stack web application that allows users to:
 • Add, edit, and list movies.
 • Search for movie data using the OMDb API.
 • All operations happen on a single-page UI built with React + Bootstrap.
-• Backend built using Node.js, Express, Sequelize, PostgreSQL with JWT authentication (optional).
+• Backend built using Node.js, Express, Sequelize, PostgreSQL.
 
 Features
 
@@ -22,7 +22,6 @@ Backend
 • Many-to-Many relationship: Movie ⬌ Actors.
 • Many-to-One relationship: Movie ➝ Producer.
 • Built with Node.js + Sequelize + PostgreSQL.
-• Optional: JWT-based user authentication.
 
 Setup & Run Locally
 
