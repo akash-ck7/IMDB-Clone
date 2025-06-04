@@ -1,0 +1,40 @@
+version: '3.8'
+
+services:
+  postgres:
+    image: postgres:15
+    container_name: imdb_postgres
+    restart: always
+    environment:
+      POSTGRES_USER: akash
+      POSTGRES_PASSWORD: vidhya1612
+      POSTGRES_DB: imdb_clone
+    ports:
+      - "5432:5432"
+    volumes:
+      - imdb_pg_data:/var/lib/postgresql/data
+
+  backend:
+    build:
+      context: ./server/imdb-backend
+    container_name: imdb_backend
+    restart: always
+    ports:
+      - "3001:3001"
+    env_file:
+      - ./server/imdb-backend/.env
+    depends_on:
+      - postgres
+
+  frontend:
+    build:
+      context: ./client/imdb-frontend
+    container_name: imdb_frontend
+    restart: always
+    ports:
+      - "3000:80"
+    depends_on:
+      - backend
+
+volumes:
+  imdb_pg_data:

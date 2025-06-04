@@ -1,0 +1,30 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+
+# Environment variables
+.env
+.env.*.local
+
+# Dependency directories
+node_modules/
+frontend/node_modules/
+backend/node_modules/
+
+# Build output
+build/
+dist/
+
+# Editor & OS junk
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Testing and coverage
+coverage/
+*.lcov
+
+# Docker override files
+docker-compose.override.yml
