@@ -28,6 +28,7 @@ Setup & Run Locally
 Prerequisites
 • Node.js >= 16
 • PostgreSQL
+. Docker
 Step-by-Step Instructions
 
 1.  Clone the Repo
@@ -35,21 +36,11 @@ Step-by-Step Instructions
     git clone https://github.com/akash-ck7/IMDB-Clone.git
     cd imdb-clone
 
-2.  Backend Setup
+2.  Intall the docker desktop client and start the engine
 
-    cd imdb-backend
-    npm install
+3.docker-compose up --build
 
-    Update config/db.config.js with your PostgreSQL credentials.
-    • Create the database manually (e.g., imdb_db) or let Sequelize sync it automatically.i use sequelize
-    • Run backend:
-    npm start
-
-3.  Frontend Setup
-
-    cd imdb-frontend
-    npm install
-    npm start
+4.After successfull build you can see that in http://localhost:3000/
 
 How It Works 1. Search Movie (OMDb API)
 • User types a movie name → gets details like title, actors, director, and release date.
