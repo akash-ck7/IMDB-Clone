@@ -6,7 +6,7 @@ import { toast } from 'react-toastify';
 import { useSelector, useDispatch } from 'react-redux';
 import { setSelectedMovieList } from '../slices/MovieSlice';
 import { fetchMovies, deleteMovie } from '../slices/MovieSlice';
-
+import dayjs from "dayjs";
 const MovieTables = () => {
   const dispatch = useDispatch();
   const { movieList } = useSelector((state) => state.tasks);
@@ -66,7 +66,7 @@ const MovieTables = () => {
       <td>{index + 1}</td>
       <td>{task.name}</td>
       <td>{task.Producer?.name || 'N/A'}</td>
-     <td>{task.releaseDate}</td>
+     <td>{dayjs(task.releaseDate).format("YYYY-MM-DD")}</td>
       <td>{task.Actors?.map(actor => actor.name).join(', ') || 'N/A'}</td>
       <td>
         <Button variant="primary" className='mx-3' onClick={() => editTask(task)}>Edit</Button>

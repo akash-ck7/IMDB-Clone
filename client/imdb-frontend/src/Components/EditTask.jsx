@@ -5,6 +5,7 @@ import Form from 'react-bootstrap/Form';
 import { updateMovie } from '../slices/MovieSlice';
 import { useSelector, useDispatch } from 'react-redux';
 import { toast } from 'react-toastify';
+import dayjs from "dayjs";
 const EditTask = ({ show, onHide }) => {
   const dispatch = useDispatch();
   const selectedMovie = useSelector((state) => state.tasks.selectedMovieList);
@@ -122,7 +123,7 @@ useEffect(() => {
             <Form.Label>Year of Release</Form.Label>
             <Form.Control
               type="date"
-              value={yearOfRelease}
+              value={dayjs(yearOfRelease).format("YYYY-MM-DD")}
               onChange={(e) => setYearOfRelease(e.target.value)}
               required
             />
