@@ -5,7 +5,7 @@ FROM node:18
 WORKDIR /app
 
 # Copy package files first for caching dependencies
-COPY package*.json ./
+COPY server/package*.json ./
 
 # Install dependencies
 RUN npm install
